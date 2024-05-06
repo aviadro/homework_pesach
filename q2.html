@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>q2</title>
+</head>
+<body>
+    <script>
+        let width= prompt("enter width")
+        let rowString = ""
+        for(i=width;i>0;i--){
+            rowString = rowString+ " "+ i
+            console.log(rowString)
+        }
+        for (i=width;i>1;i--){
+            rowString= rowString.slice(2)
+            console.log(rowString)
+        }
+        for (i=2; i<=width; i++){
+            rowString+= " "+ i
+            console.log(rowString)
+        }
+       
+   /*   need to check why the following code is wrong:
+        for (i=2; i<(width+1); i++){
+            rowString+= " "+ i
+            console.log(rowString)
+        }
+   */
+   
+   </script>
+</body>
+</html>
