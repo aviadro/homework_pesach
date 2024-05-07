@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>q5</title>
+  </head>
+  <body>
+    <script>
+      let bhour = prompt('enter begining hour')
+      let bminute = prompt('enter begining minute')
+      let bsecond = prompt('enter begining second')
+      let ehour = prompt('enter ending hour')
+      let eminute = prompt('enter ending minute')
+      let esecond = prompt('enter ending second')
+      let seconds = 0
+      let minutes = 0
+      let hours = 0
+      while (bhour != ehour || bminute != eminute || bsecond != esecond) {
+        bsecond++
+        if (bsecond >= 60) {
+          bsecond = 0
+          bminute++
+        }
+        if (bminute >= 60) {
+          bminute = 0
+          bhour++
+        }
+        if (bhour >= 24) {
+          bhour = 0
+        }
+        
+        seconds++
+        if (seconds>=60){
+            seconds = 0
+            minutes++
+        }
+        if (minutes>=60){
+            minutes = 0
+            hours++
+        }
+      }
+      console.log(hours + ':' + minutes + ':' + seconds)  
+    </script>
+  </body>
+</html>
