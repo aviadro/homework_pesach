@@ -15,32 +15,30 @@
     let eminute = prompt ("enter ending minute")
     let esecond = prompt ("enter ending second")
 
-    console.log(bhour+":"+bminute+":"+bsecond)
+//    console.log(bhour+":"+bminute+":"+bsecond)
     
     while (bhour!=ehour || bminute!=eminute || bsecond!=esecond){
+        console.log(bhour+":"+bminute+":"+bsecond)
         if (bhour<24){
             if (bminute<60){
                 if (bsecond<60){
                     bsecond++
-                    console.log(bhour+":"+bminute+":"+bsecond)
                 }
                 else {
                     bsecond=0
                     bminute++
-                    console.log(bhour+":"+bminute+":"+bsecond)
                 }
             }
             else{
                 bsecond=0
-                bminute++
-                console.log(bhour+":"+bminute+":"+bsecond)
+                bminute = 0
+                bhour++
             }
         }
         else {
             bhour=0
             bminute=0
             bsecond=0
-            console.log(bhour+":"+bminute+":"+bsecond)
         }
     }
     </script>
