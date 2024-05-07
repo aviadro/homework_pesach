@@ -16,6 +16,7 @@
       let seconds = 0
       let minutes = 0
       let hours = 0
+      
       while (bhour != ehour || bminute != eminute || bsecond != esecond) {
         bsecond++
         if (bsecond >= 60) {
@@ -29,18 +30,18 @@
         if (bhour >= 24) {
           bhour = 0
         }
-        
+
         seconds++
-        if (seconds>=60){
-            seconds = 0
-            minutes++
+        if (seconds >= 60) {
+          seconds = 0
+          minutes++
         }
-        if (minutes>=60){
-            minutes = 0
-            hours++
+        if (minutes >= 60) {
+          minutes = 0
+          hours++
         }
       }
-      console.log(hours + ':' + minutes + ':' + seconds)  
+      console.log(hours + ':' + minutes + ':' + seconds)
     </script>
   </body>
 </html>

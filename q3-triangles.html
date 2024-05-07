@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>q3</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        let width= prompt("enter width")
-        for (i=1; i<=width;i++){
-            let rowString = i
-            for (j=1; j<i; j++){
-                rowString+= " " + i
-            }
-            console.log(rowString)
-            for (k=i; k>1; k--){
-                rowString= rowString.slice(2)
-                console.log(rowString)
-            }
+      let width = prompt('enter width')
+
+      for (i = 1; i <= width; i++) {
+        let rowString = i
+        for (j = 1; j < i; j++) {
+          rowString += ' ' + i
         }
+        console.log(rowString)
+        for (k = i; k > 1; k--) {
+          rowString = rowString.slice(2)
+          console.log(rowString)
+        }
+      }
     </script>
-</body>
+  </body>
 </html>

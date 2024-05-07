@@ -1,50 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>q6</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-    // function to find the Greatest Common Divisor (GCD) of two numbers
-    function gcd(a, b) {
+      // function to find the Greatest Common Divisor (GCD) of two numbers
+      function gcd(a, b) {
         while (b !== 0) {
-            const temp = b;
-            b = a % b;
-            a = temp;
+          const temp = b
+          b = a % b
+          a = temp
         }
-        return a;
-    }
+        return a
+      }
 
-  
-    // Function to find the GCD of an array of numbers
-    function findGCD(numbers) {
+      // Function to find the GCD of an array of numbers
+      function findGCD(numbers) {
         if (numbers.length < 2) {
-            throw new Error("Need at least two numbers to find LCM");
+          throw new Error('Need at least two numbers to find LCM')
         }
 
         // Start with the GCD of the first two numbers
-        let currentGCD = gcd(numbers[0], numbers[1]);
+        let currentGCD = gcd(numbers[0], numbers[1])
 
         // Iterate through the rest of the array, updating the GCD
         for (let i = 2; i < numbers.length; i++) {
-            currentGCD = gcd(currentGCD, numbers[i]);
+          currentGCD = gcd(currentGCD, numbers[i])
         }
 
-        return currentGCD;
-    }
+        return currentGCD
+      }
 
-    let numbers = []
-    while (true){
-        let userInput = prompt("enter numbers. to finish enter a negative:")
-        let num = parseFloat(userInput);
-        if (num<0){break}
+      let numbers = []
+      while (true) {
+        let userInput = prompt('enter numbers. to finish enter a negative:')
+        let num = parseFloat(userInput)
+        if (num < 0) {
+          break
+        }
         numbers.push(num)
-    }
+      }
 
-    let allGcd = findGCD(numbers)
-    console.log("the Greatest Common Divisor of the numbers you entered is: " + allGcd)
+      let allGcd = findGCD(numbers)
+      console.log(
+        'the Greatest Common Divisor of the numbers you entered is: ' + allGcd
+      )
     </script>
-</body>
+  </body>
 </html>

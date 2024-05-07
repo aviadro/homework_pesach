@@ -7,36 +7,38 @@
   </head>
   <body>
     <script>
-       function printMatrixToConsole(matrix) {
-  // Loop through each row
-  for (let i = 0; i < matrix.length; i++) {
-    // Join the elements of the row into a string
-    let rowString = matrix[i].join(" ");
-    // Print the row string to the console
-    console.log(rowString);
-  }
-}
+      function printMatrixToConsole(matrix) {
+        // Loop through each row
+        for (let i = 0; i < matrix.length; i++) {
+          // Join the elements of the row into a string
+          let rowString = matrix[i].join(' ')
+          // Print the row string to the console
+          console.log(rowString)
+        }
+      }
 
-        let rows = prompt ("rows")
-        let columns = prompt ("columns")
-        let table = new Array(rows);
-            for (i = 0; i < rows; i++) {
-                table[i] = new Array(columns).fill(" "); // Fill with spaces or any default value
-            }
-            
-            for (j = 0; j < columns; j++) {
-            table[0][j] = "#";
-            table[rows - 1][j] = "#";
-            }
-            for (i = 1; i < rows - 1; i++) {
-            table[i][0] = "#"; // Example of initializing inner content
-            table[i][columns - 1] = "#";
-            for(j=1;j<columns-1;j++){
-              table[i][j] = "`"
-            }
-            }
+      let rows = prompt('rows')
+      let columns = prompt('columns')
+      let table = new Array(rows)
 
-        printMatrixToConsole(table)
+      for (i = 0; i < rows; i++) {
+        table[i] = new Array(columns).fill(' ') // Fill with spaces or any default value
+      }
+
+      for (j = 0; j < columns; j++) {
+        table[0][j] = '#'
+        table[rows - 1][j] = '#'
+      }
+
+      for (i = 1; i < rows - 1; i++) {
+        table[i][0] = '#' // Example of initializing inner content
+        table[i][columns - 1] = '#'
+        for (j = 1; j < columns - 1; j++) {
+          table[i][j] = '`'
+        }
+      }
+
+      printMatrixToConsole(table)
     </script>
   </body>
 </html>
