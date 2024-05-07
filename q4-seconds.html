@@ -1,47 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>q4</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-    
-    let bhour = prompt ("enter begining hour")
-    let bminute = prompt ("enter begining minute")
-    let bsecond = prompt ("enter begining second")
-    let ehour = prompt ("enter ending hour")
-    let eminute = prompt ("enter ending minute")
-    let esecond = prompt ("enter ending second")
+      let bhour = prompt('enter begining hour')
+      let bminute = prompt('enter begining minute')
+      let bsecond = prompt('enter begining second')
+      let ehour = prompt('enter ending hour')
+      let eminute = prompt('enter ending minute')
+      let esecond = prompt('enter ending second')
 
-//    console.log(bhour+":"+bminute+":"+bsecond)
-    
-    while (bhour!=ehour || bminute!=eminute || bsecond!=esecond){
-        console.log(bhour+":"+bminute+":"+bsecond)
-        if (bhour<24){
-            if (bminute<60){
-                if (bsecond<60){
-                    bsecond++
-                }
-                else {
-                    bsecond=0
-                    bminute++
-                }
-            }
-            else{
-                bsecond=0
-                bminute = 0
-                bhour++
-            }
+      while (bhour != ehour || bminute != eminute || bsecond != esecond) {
+        bsecond++
+        if (bsecond >= 60) {
+          bsecond = 0
+          bminute++
         }
-        else {
-            bhour=0
-            bminute=0
-            bsecond=0
+        if (bminute >= 60) {
+          bminute = 0
+          bhour++
         }
-    }
+        if (bhour >= 24) {
+          bhour = 0
+        }
+        console.log(bhour + ':' + bminute + ':' + bsecond)
+      }
     </script>
-    
-</body>
+  </body>
 </html>
